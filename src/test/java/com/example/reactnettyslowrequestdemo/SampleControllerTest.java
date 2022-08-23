@@ -33,4 +33,17 @@ class SampleControllerTest {
                 .expectStatus().is2xxSuccessful();
     }
 
+    @Test
+    @DisplayName("시간 측정2")
+    public void test2() throws Exception {
+        webClient.get().uri("/test2")
+                .exchange();
+
+        webClient.get().uri("/test2")
+                .exchange();
+
+        webClient.get().uri("/test2")
+                .exchange();
+    }
+
 }

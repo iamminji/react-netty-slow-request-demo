@@ -15,6 +15,7 @@ public class SampleController {
 
     @GetMapping(value = "/test")
     public Mono<String> test() {
+        System.out.println("web client 요청");
         long startTime = System.nanoTime();
         Mono<String> result = sampleRequestClient.test();
         long endTime = System.nanoTime();
@@ -24,7 +25,15 @@ public class SampleController {
     }
 
     @GetMapping(value = "/test2")
-    public void test2() {
-        throw new RuntimeException();
+    public Mono<String> test2() {
+        System.out.println("http client 요청");
+        long startTime = System.nanoTime();
+        Mono<String> result = sampleRequestClient.test2();
+        long endTime = System.nanoTime();
+        long duration = (endTime - startTime);
+        System.out.println(duration / 1000);
+        return result;
     }
+
+
 }
