@@ -15,7 +15,7 @@ public class SampleRequestClient {
     private final HttpClient httpClient;
 
     public Mono<String> test() {
-        return this.webClient.get().uri("https://www.google.co.kr/")
+        return this.webClient.get().uri("http://localhost:8000/")
                 .retrieve()
                 .bodyToMono(String.class);
     }

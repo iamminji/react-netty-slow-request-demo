@@ -26,7 +26,9 @@ public class WebClientConfiguration {
                 // https://github.com/reactor/reactor-netty/issues/1563#issuecomment-805918236
                 .resolver(DefaultAddressResolverGroup.INSTANCE)
                 // https://projectreactor.io/docs/netty/release/reference/index.html#_host_name_resolution_2
-                .resolver(spec -> spec.queryTimeout(Duration.ofMillis(500)))
+                .resolver(spec -> {
+                    spec.queryTimeout(Duration.ofMillis(500));
+                })
                 .keepAlive(true)
                 .responseTimeout(Duration.ofSeconds(10L));
 
