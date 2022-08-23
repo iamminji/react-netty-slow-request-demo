@@ -11,7 +11,7 @@ import org.springframework.test.web.reactive.server.WebTestClient;
 
 @ExtendWith(SpringExtension.class)
 @WebFluxTest(controllers = SampleController.class)
-@Import(SampleRequestClient.class)
+@Import({SampleRequestClient.class, WebClientConfiguration.class})
 class SampleControllerTest {
 
     @Autowired
