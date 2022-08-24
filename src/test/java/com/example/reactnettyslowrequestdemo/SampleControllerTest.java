@@ -1,5 +1,7 @@
 package com.example.reactnettyslowrequestdemo;
 
+import com.example.reactnettyslowrequestdemo.controller.SampleController;
+import com.example.reactnettyslowrequestdemo.service.SampleRequestClient;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

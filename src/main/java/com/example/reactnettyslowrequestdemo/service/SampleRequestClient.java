@@ -1,4 +1,4 @@
-package com.example.reactnettyslowrequestdemo;
+package com.example.reactnettyslowrequestdemo.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
